@@ -5,6 +5,7 @@ import { Button } from "@/app/_components/ui/button"
 import { ChevronLeftIcon, MapPinIcon, MenuIcon, StarIcon } from "lucide-react"
 import Link from "next/link"
 import ServiceItem from "@/app/_components/service-item"
+import PhoneItem from "@/app/_components/phone-item"
 
 type PageProps = {
   params: Promise<{ id: string }>
@@ -72,6 +73,11 @@ const BarbershoPage = async ({ params }: PageProps) => {
             <ServiceItem key={service.id} service={service} />
           ))}
         </div>
+      </div>
+      <div className="space-y-3 p-5">
+        {barbershop.phones.map((phone, i) => (
+          <PhoneItem key={phone + i} phone={phone} />
+        ))}
       </div>
     </div>
   )
