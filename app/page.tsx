@@ -64,17 +64,16 @@ const Home = async () => {
             <BarbershopItem key={barbershop.id} barbershop={barbershop} />
           ))}
         </div>
-      </div>
 
-      <h2 className="mt-6 mb-3 text-xs font-bold text-gray-400 uppercase">
-        Populares
-      </h2>
-      <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
-        {popularBarbershops.map((barbershop) => (
-          <BarbershopItem key={barbershop.id} barbershop={barbershop} />
-        ))}
+        <h2 className="mt-6 mb-3 text-xs font-bold text-gray-400 uppercase">
+          Populares
+        </h2>
+        <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
+          {popularBarbershops.map((barbershop) => (
+            <BarbershopItem key={barbershop.id} barbershop={barbershop} />
+          ))}
+        </div>
       </div>
-
       <footer>
         <Card>
           <CardContent className="px-5 py-6">
